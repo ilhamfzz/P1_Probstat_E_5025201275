@@ -20,7 +20,7 @@ babies %>% ggplot() +
   theme_bw()
 
 #3c
-#
+#The simulated result of about 11.5% is pretty close to the theoretical probability of about 13%
 
 #3d in poisson distribution, mean are equal with variance
 variance = mean_lahir

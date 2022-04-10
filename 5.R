@@ -14,4 +14,6 @@ hist(rexp(10000, 3))
 
 #5c
 mean(rexp(100, 3))
+#we can also use (1/lambda) to get result mean
 var(rexp(100, 3))
+#the variance result can also define by square(mean)

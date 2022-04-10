@@ -12,7 +12,7 @@ Soal distribusi geometrik dengan iniliasisasi awal
 p = 0.20
 n = 3
 ```
-### 1a
+
 - Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0.20 dari populasi menghadiri acara vaksinasi? (distribusi Geometrik)
 
 setelah diinisiasi kedua variabel tersebut, gunakan syntax `dgeom` untuk mencari distribusi geometriknya
@@ -21,7 +21,6 @@ setelah diinisiasi kedua variabel tersebut, gunakan syntax `dgeom` untuk mencari
 dgeom(x = n, prob = p)
 ```
 
-### 1b
 - mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
 
 gabungkan syntax `r` karena menggunakan data random `geom` untuk distribusi geometrik dan masukkan kedalam fungsi `mean()`
@@ -30,12 +29,10 @@ gabungkan syntax `r` karena menggunakan data random `geom` untuk distribusi geom
 mean(rgeom(n = 10000, prob = p) == 3)
 ```
 
-### 1c
 - Bandingkan hasil poin a dan b, apa kesimpulan yang bisa didapatkan?
 
 didapat hasil yang tidak terlalu jauh, hal ini disebabkan hasil dari nilai b yang terdiri dari random data dibandingkan dengan hasil dari nilai a yang merupakan nilai tetap
 
-### 1d
 - Histogram distribusi Geometrik, dengan peluang X = 3 gagal sebelum sukses pertama
 ```R
 #1c histogram
@@ -58,7 +55,7 @@ data.frame(x = 0:10, prob = dgeom(x = 0:10, prob = p)) %>%
        y = "Probability") 
 ```
 ![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/1c.png)
-### 1e
+
 - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
 
 nilai rataan dan varian pada distribusi geometrik bisa didapatkan dengan

@@ -14,6 +14,7 @@ n = 3
 ```
 ### 1a
 - Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0.20 dari populasi menghadiri acara vaksinasi? (distribusi Geometrik)
+
 setelah diinisiasi kedua variabel tersebut, gunakan syntax `dgeom` untuk mencari distribusi geometriknya
 ```R
 #1a exact
@@ -22,6 +23,7 @@ dgeom(x = n, prob = p)
 
 ### 1b
 - mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
+
 gabungkan syntax `r` karena menggunakan data random `geom` untuk distribusi geometrik dan masukkan kedalam fungsi `mean()`
 ```R
 #1b
@@ -30,6 +32,7 @@ mean(rgeom(n = 10000, prob = p) == 3)
 
 ### 1c
 - Bandingkan hasil poin a dan b, apa kesimpulan yang bisa didapatkan?
+
 didapat hasil yang tidak terlalu jauh, hal ini disebabkan hasil dari nilai b yang terdiri dari random data dibandingkan dengan hasil dari nilai a yang merupakan nilai tetap
 
 ### 1d
@@ -57,6 +60,7 @@ data.frame(x = 0:10, prob = dgeom(x = 0:10, prob = p)) %>%
 ![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/1c.png)
 ### 1e
 - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
+
 nilai rataan dan varian pada distribusi geometrik bisa didapatkan dengan
 ```R
 1/p #mean
@@ -66,6 +70,7 @@ nilai rataan dan varian pada distribusi geometrik bisa didapatkan dengan
 ## Nomer 2
 > Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
 -  Peluang terdapat 4 pasien yang sembuh.
+
 gunakan syntax `d` untuk probability density function dan `binom` untuk distribusi binomial
 ```R
 #2a
@@ -81,6 +86,7 @@ barplot(data$y, names.arg=data$x, ylab="Peluang", xlab="Jumlah Pasien")
 ![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/2b.png)
 
 - Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
+
 nilai rataan distribusi binomial didapat dari `pasien sembuh*peluang sembuh` sedangkan nilai varian-nya didapat dari `pasien sembuh*peluang sembuh*(peluang tidak sembuh)`
 ```R
 #2c
@@ -92,6 +98,7 @@ nilai rataan distribusi binomial didapat dari `pasien sembuh*peluang sembuh` sed
 ## Nomer 3
 > Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
 - Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+
 gunakan syntax `d` untuk probability density function dan `pois` untuk distribusi poisson, inputan fungsi merupakan (suksesi peluang, mean)
 ```R
 mean_lahir=4.5
@@ -101,6 +108,7 @@ dpois(6, mean_lahir)
 jangan lupa untuk menginiliasasi variabel `mean_lahir` terlebih dahulu
 
 - simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama setahun (n = 365)
+
 pada simulasi ini digunakan `r` untuk distribusi acak selama 365 hari dan `pois` untuk distribusi poisson
 ```R
 set.seed(2)
@@ -122,9 +130,11 @@ babies %>% ggplot() +
 ![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/3b.png)
 
 - dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+
 Dilihat dari kedua data diatas, didapat bahwa hasil dari simulasi yang diperoleh yaitu sekitar 11.5% hanya memiliki sedikit perbedaan dari probabilitas distribusi poisson yang bernilai sekitar 13%
 
 - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson
+
 pada distribusi poisson, nilai rataan dan varian adalah sama
 ```R
 #3d in poisson distribution, mean are equal with variance
@@ -142,6 +152,7 @@ x = 2
 v = 10
 ```
 - Fungsi Probabilitas dari Distribusi Chi-Square.
+
 gunakan syntax `d` untuk probability density function dan `chisq` untuk distribusi Chi-Square
 ```R
 #4a Chi-Square distribution probabilities
@@ -149,6 +160,7 @@ dchisq(x, v)
 ```
 
 - Histogram dari Distribusi Chi-Square dengan 100 data random.
+
 karena menggunakan data random, maka gunakan syntax `r` untuk data distribusi acak
 ```R
 #4b Chi-Square distribution with 100 random data
@@ -158,6 +170,7 @@ hist(temp)
 ![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/4b.png)
 
 - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
+
 Pada distribusi Chi-Square, nilai varian adalah `2*nilai mean`
 ```R
 #4c variance of Chi-Square distribution is 2*mean
@@ -170,12 +183,14 @@ variance
 ## Nomer 5
 > Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
 - Fungsi Probabilitas dari Distribusi Exponensial
+
 gunakan syntax `d` untuk probability density function dan `exp` untuk distribusi Exponential, panggilan fungsinya berupa `(rate)`
 ```R
 #5a
 dexp(3)
 ```
 - Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+
 karena menggunakan data random maka gunakan `set.seed` disetiap pemanggilan agar data random yang didapat akan selalu sama untuk pemanggilan berikutnya, gunakan juga syntax `r` untuk data distribusi acak. Lalu untuk optional tampilan histogramnya, gunakan `par(mfrow = c(2,2))` untuk menampilkan semua data histogram dalam satu frame
 ```R
 #5b 
@@ -192,6 +207,7 @@ hist(rexp(10000, 3))
 ![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/5b.png)
 
 - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+
 Gunakan syntax `mean()` untuk mencari rataan dan `var` untuk mencari varian
 ```R
 mean(rexp(100, 3))
@@ -208,9 +224,10 @@ mean = 50
 ```
 
 - Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).
-set.seed(100)
+
 karena menggunakan data random maka gunakan `set.seed` disetiap pemanggilan agar data random yang didapat akan selalu sama untuk pemanggilan berikutnya, gunakan juga syntax `r` untuk data distribusi acak dan `norm` untuk distribusi normal. Inisialisasi x1 dengan fungsi `floor()` dan x2 dengan fungsi `ceiling()`. Gunakan `pnorm` untuk mencari peluang distribusi normal P(X1 ≤ x ≤ X2). Peluang tersebut didapat dari `P(x ≤ X2) - P(-∞ ≤ X1)`.
 ```R
+set.seed(100)
 rndm = rnorm(100, mean, sd)
 x1 = floor(mean(rndm))
 x2 = ceiling(mean(rndm))

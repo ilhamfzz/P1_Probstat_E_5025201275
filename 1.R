@@ -7,7 +7,7 @@ dgeom(x = n, prob = p)
 mean(rgeom(n = 10000, prob = p) == 3)
 
 #1c
-#we know that 1a and 1b have the same result
+#we know that 1a and 1b have little diffrent result, it caused at point b who have random data but at point a have a constanlly
 
 #1c histogram
 library(dplyr)

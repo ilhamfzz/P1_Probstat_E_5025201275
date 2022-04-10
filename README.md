@@ -225,7 +225,7 @@ mean = 50
 
 - Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).
 
-karena menggunakan data random maka gunakan `set.seed` disetiap pemanggilan agar data random yang didapat akan selalu sama untuk pemanggilan berikutnya, gunakan juga syntax `r` untuk data distribusi acak dan `norm` untuk distribusi normal. Inisialisasi x1 dengan fungsi `floor()` dan x2 dengan fungsi `ceiling()`. Gunakan `pnorm` untuk mencari peluang distribusi normal P(X1 ≤ x ≤ X2). Peluang tersebut didapat dari `P(x ≤ X2) - P(-∞ ≤ X1)`.
+karena menggunakan data random maka gunakan `set.seed` disetiap pemanggilan agar data random yang didapat akan selalu sama untuk pemanggilan berikutnya, gunakan juga syntax `r` untuk data distribusi acak dan `norm` untuk distribusi normal. Inisialisasi x1 dengan fungsi `floor()` dan x2 dengan fungsi `ceiling()`. Gunakan `pnorm` untuk mencari peluang distribusi normal P(X1 ≤ x ≤ X2). Peluang tersebut didapat dari `P(x ≤ X2) - P(x ≤ X1)`.
 ```R
 set.seed(100)
 rndm = rnorm(100, mean, sd)

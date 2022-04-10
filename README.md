@@ -210,6 +210,7 @@ Gunakan syntax `mean()` untuk mencari rataan dan `var()` untuk mencari varian
 mean(rexp(100, 3))
 var(rexp(100, 3))
 ```
+Untuk mencari rataan secara umum juga bisa didefinisikan sesuai rumus distribusi exponential yaitu `1/λ`. Lalu untuk varian-nya yaitu `(1/λ)^2`
 
 ## Nomer 6
 > Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan

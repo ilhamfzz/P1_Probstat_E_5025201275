@@ -189,6 +189,7 @@ hist(rexp(1000, 3))
 set.seed(1)
 hist(rexp(10000, 3))
 ```
+![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/5b.png)
 
 - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
 Gunakan syntax `mean()` untuk mencari rataan dan `var` untuk mencari varian
@@ -229,6 +230,7 @@ plot(rndm, type = "l")
 #6b
 hist(rnorm(100, mean, sd), breaks = 50, main = "5025201275_Moh. Ilham Fakhri Zamzami_E_DNHistogram", xlab = "Value", ylab = "Frequency")
 ```
+![alt text](https://github.com/ilhamfzz/P1_Probstat_E_5025201275/blob/main/temp/6.png)
 
 - Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.
 ```R

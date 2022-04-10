@@ -205,7 +205,7 @@ hist(rexp(10000, 3))
 
 - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
 
-Gunakan syntax `mean()` untuk mencari rataan dan `var` untuk mencari varian
+Gunakan syntax `mean()` untuk mencari rataan dan `var()` untuk mencari varian
 ```R
 mean(rexp(100, 3))
 var(rexp(100, 3))
